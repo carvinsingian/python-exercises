@@ -7,6 +7,9 @@ import ecommerce.shipping
 from ecommerce import shipping
 from ecommerce.shipping import calc_shipping
 
+#using path to get file
+from pathlib import Path
+
 
 #Class with constructor and to string method
 class Person:
@@ -59,20 +62,33 @@ def age_printer(age):
 
 
 #Logic here
-age = input('>')
-print(age_printer(age))
-carvin = Person('Carvin', 23)
-print(carvin)
+# age = input('>')
+# print(age_printer(age))
+# carvin = Person('Carvin', 23)
+# print(carvin)
 
-array = []
-i = 0
-array_size = int(input('>array_size:'))
+# array = []
+# i = 0
+# array_size = int(input('>array_size:'))
 
-while i < array_size:
-	array.append(int(input(f'element {i+1}>')))
-	i += 1
+# while i < array_size:
+# 	array.append(int(input(f'element {i+1}>')))
+# 	i += 1
 
-print(utils.kg_to_lbs(70))
-print(kg_to_lbs(70))
-print(utils.find_max(array))
+# print(utils.kg_to_lbs(70))
+# print(kg_to_lbs(70))
+# print(utils.find_max(array))
+
+"""
+Absolute path
+Relative path
+using Path
+
+path.mkdir() creates a path
+path.rmdir() removes a path
+path.glob() search for files using a pattern
+"""
+path = Path()
+for file in path.glob('*.*'):
+	print(file)
 
