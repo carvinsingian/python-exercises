@@ -91,4 +91,3 @@ path.glob() search for files using a pattern
 path = Path()
 for file in path.glob('*.*'):
 	print(file)
-
